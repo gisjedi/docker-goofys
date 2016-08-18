@@ -26,6 +26,8 @@ RUN apk update && \
     /usr/local/src/${GOOFYS_PATH} && \
   cd \
     /usr/local/src/${GOOFYS_PATH} && \
+  go get \
+    ${GOOFYS_PATH}... && \
   go build \
     -o /usr/bin/goofys && \
   apk del \
